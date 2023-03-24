@@ -1,9 +1,9 @@
 ﻿@model BigSchool_PhamVanThanh.ViewModels.CoursesViewModel
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Attending";
     <link href="~/Content/Site.css" rel="stylesheet" />
 }
-
+<h2>Attending</h2>
 <div class="row">
     <ul class="course">
         @foreach (var course in Model.UpcommingCourses)
@@ -39,7 +39,7 @@
     </ul>
     @section scripts
     {
-<script>
+        <script>
     $(document).ready(function () {
         $(".js-toggle-attendance").click(function (e) {
             var button = $(e.target);
@@ -66,5 +66,5 @@
              });
         });
         </script>
-        }
+    }
 </div>
